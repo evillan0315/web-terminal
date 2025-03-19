@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking-cursor::after {
+  content: "█"; /* Block cursor */
+  display: inline-block;
+  animation: blink 1s infinite;
+  font-size: 1.2rem; /* Adjust size */
+  line-height: 1;
+  font-weight: bold;
+  width: 2rem; /* Cursor thickness */
+  height: 1.2rem; /* Cursor height */
+}
