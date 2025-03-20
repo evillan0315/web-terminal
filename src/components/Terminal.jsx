@@ -88,7 +88,7 @@ const Terminal = ({ open, onClose }) => {
         navigate('/login');
         return;
     }
-     console.log(token);
+
     const connectSocket = () => {
         
 		const socket = io(socketURL, {
@@ -115,7 +115,7 @@ const Terminal = ({ open, onClose }) => {
 		});
 
 		socket.on('error', (data) => {
-		    //addEntry('error', data);
+		    addEntry('error', data);
 		});
 
 		socket.on('disconnect', (data) => {

@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: "/",
   server: {
+
     host: "0.0.0.0",  // Allow access from anywhere
     port: 3000,       // Run on port 3000
     //strictPort: true,
@@ -27,6 +28,9 @@ export default defineConfig({
   //   host: "board-api.duckdns.org",
   //   protocol: "https",
   //  },   
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'], // Ensure Vite recognizes JSX files
   },
   build: {
     outDir: "dist",  // Change this to your desired output directory
